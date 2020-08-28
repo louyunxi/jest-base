@@ -1,7 +1,24 @@
 /* 
-默认只支持 node环境下的 模块导入导出方式 commonJs exports module.exports require这种
+1.默认只支持 node环境下的 模块导入导出方式 commonJs exports module.exports require这种
 不支持 esModule   export default/export import
 所以要用babel解析下 
+
+配置babel
+cnpm install @babel/core @babel/preset-env -D
+
+.babelrc
+{
+  "presets":[
+    [
+      "@babel/preset-env"，{
+        "targets":{
+          "node":"current"
+        }
+      }
+    ]
+  ]
+}
+
 */
 
 

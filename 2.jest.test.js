@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-08-26 19:39:10
+ * @LastEditTime: 2020-08-28 18:47:45
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: \Typescript-Knowledge-Summaryf:\linshi\jest-base\2.jest.test.js
+ */
 import {add, minus, multi} from './1.math';
 
 test('测试加法 3 + 7', () => {
@@ -13,4 +21,3 @@ test('测试乘法 3 * 3', () => {
 })
 
 // jest 默认不支持 esmodule  只支持commonJs 的模块方式
-// 
