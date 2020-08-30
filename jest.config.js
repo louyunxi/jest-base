@@ -1,47 +1,3 @@
-/* 
-1.默认只支持 node环境下的 模块导入导出方式 commonJs exports module.exports require这种
-不支持 esModule   export default/export import
-所以要用babel解析下 
-
-配置babel
-cnpm install @babel/core @babel/preset-env -D
-
-.babelrc
-{
-  "presets":[
-    [
-      "@babel/preset-env"，{
-        "targets":{
-          "node":"current"
-        }
-      }
-    ]
-  ]
-}
-
-*/
-
-
-/* 
-2.生成 jest 注册表
-
-> jest --init
-
-The following questions will help Jest to create a suitable configuration for your project
-√ Choose the test environment that will be used for testing » jsdom (browser-like)
-√ Do you want Jest to add coverage reports? ... yes
-√ Which provider should be used to instrument code for coverage? » babel
-√ Automatically clear mock calls and instances between every test? ... yes
-�  Configuration file created at F:\linshi\jest-base\jest.config.js 
-*/
-
-/* 
-3.生成测试覆盖率
-npx jest --coverage 
-
-*/
-
-
 module.exports = {
   // All imported modules in your tests should be mocked automatically
   // automock: false,
@@ -196,7 +152,8 @@ module.exports = {
   // ],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
-  // testRegex: [],
+  //testRegex: [],
+  //testRegex: '2.jest.test.js',
 
   // This option allows the use of a custom results processor
   // testResultsProcessor: undefined,

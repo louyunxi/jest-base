@@ -1,11 +1,48 @@
-/*
- * @Author: your name
- * @Date: 2020-08-26 19:39:10
- * @LastEditTime: 2020-08-28 18:47:45
- * @LastEditors: your name
- * @Description: In User Settings Edit
- * @FilePath: \Typescript-Knowledge-Summaryf:\linshi\jest-base\2.jest.test.js
- */
+
+/* 
+1.默认只支持 node环境下的 模块导入导出方式 commonJs exports module.exports require这种
+不支持 esModule   export default/export import
+所以要用babel解析下 
+
+配置babel
+cnpm install @babel/core @babel/preset-env -D
+
+.babelrc
+{
+  "presets":[
+    [
+      "@babel/preset-env"，{
+        "targets":{
+          "node":"current"
+        }
+      }
+    ]
+  ]
+}
+jest 内置jest-babel插件 会找到项目中 .babelrc文件 并运行babel编译后 再进行测试
+
+*/
+
+
+/* 
+2.生成 jest 注册表
+
+> jest --init
+
+The following questions will help Jest to create a suitable configuration for your project
+√ Choose the test environment that will be used for testing » jsdom (browser-like)
+√ Do you want Jest to add coverage reports? ... yes
+√ Which provider should be used to instrument code for coverage? » babel
+√ Automatically clear mock calls and instances between every test? ... yes
+�  Configuration file created at F:\linshi\jest-base\jest.config.js 
+可配置 指定测试文件和文件夹 testRegex
+*/
+
+/* 
+3.生成测试覆盖率
+npx jest --coverage 
+
+*/
 import {add, minus, multi} from './1.math';
 
 test('测试加法 3 + 7', () => {

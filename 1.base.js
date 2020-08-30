@@ -1,16 +1,16 @@
 /*
  * @Author: your name
- * @Date: 2020-08-26 19:38:35
- * @LastEditTime: 2020-08-26 21:03:53
+ * @Date: 2020-08-30 21:38:09
+ * @LastEditTime: 2020-08-30 21:56:30
  * @LastEditors: your name
  * @Description: In User Settings Edit
- * @FilePath: \Typescript-Knowledge-Summaryf:\linshi\jest-base\1.基本原理.js
+ * @FilePath: \demovueclif:\lianxi\jest-base\1.基本原理\index.js
  */
 /**
  * @作者 Lucifer-ye
  * @创建时间 2020/8/16 0016 17:55
  */
-import { add, minus, multi } from './1.math'
+const {add, minus, multi}=require('./math.js');
 /** ———————————————————————————————————————— step one ———————————————————————————————————————— **/
 const result = add(3,7);
 const expected = 10;
