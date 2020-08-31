@@ -1,19 +1,23 @@
 /* 
+
 //匹配器
 toBe 相当于 ===
 toEqual 比较对象内容 
 toBeNull 是否为null （undefined也无法满足）
 toBeUndefined 是否为undefined
 toBeDefined  是否被定义过了
+
 //布尔值相关
 toBeTruthy 是否为真   1，true等 （expect().not.toBeFalsy()）
 toBeFalsy 是否为false  0,false等 （expect().not.toBeTruthy()）
+
 //数字相关
 toBeGreaterThan  大于
 toBeGreaterThanOrEqual 大于等于
 toBeLessThan 小于
 toBeLessThanOrEqual 小于等于
 toBeCloseTo
+
 //字符串 相关
 toMatch expect(str).toMatch(/zuoanxinhui/); expect(set).toContain('zuoan');
 //array set
@@ -21,6 +25,7 @@ toContain expect(set).toContain('zuoan');
 
 //错误
 expect(throwNewErrorFunc).toThrow('this is a new error'); 
+
 */
 
 
@@ -32,8 +37,7 @@ test('测试10与10相匹配', () => {
   // toBe 匹配器 matchers
   // object is  ===
   const a = { one: 1 };
-  // expect(10).toBe(10);
-  expect(a).toBe({ one: 1});
+  expect(a).toEqual({ one: 1});
 });
 
 test('toEqual 匹配器', () => {
@@ -87,7 +91,8 @@ test('toBeGreaterThanOrEqual 匹配器', () => {
   expect(count).toBeGreaterThanOrEqual(10);
 });
 
-// test('toBeCloseTo 匹配器', () => {
+ 
+test('toBeCloseTo 匹配器', () => {
   const firstNumber = 0.1;
   const secondNumber = 0.2;
   expect(firstNumber + secondNumber).toBeCloseTo(0.3);

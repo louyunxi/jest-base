@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest",
+    "jest": "jest --watchAll",
     "jestConfig": "jest --init"
   },
   "keywords": [],
