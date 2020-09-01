@@ -7,7 +7,8 @@
     "test": "jest",
     "testa": "jest --watchAll",
     "testo": "jest --watch",
-    "jestConfig": "jest --init"
+    "config": "jest --init",
+    "coverage": "jest --coverage"
   },
   "keywords": [],
   "author": "",

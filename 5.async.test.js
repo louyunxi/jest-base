@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-08-31 00:02:35
+ * @LastEditTime: 2020-09-01 13:53:17
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \demovueclif:\lianxi\jest-base\5.async.test.js
+ */
 
 //关于 异步方法的测试
 
@@ -43,7 +51,10 @@ test('异步测试4,针对返回premise',async ()=>{
 
 test('异步测试5,针对返回premise',async ()=>{
     var result=await expect(syncReturnPromise());
-    expect(result.respCode).toBe(0);
+    console.log(result)
+    expect(result.respCode).resolves.toMatchObject({
+        "status":200
+    })
 })
 
 
