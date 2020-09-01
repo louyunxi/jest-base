@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-08-31 00:02:35
- * @LastEditTime: 2020-09-01 13:53:17
+ * @LastEditTime: 2020-09-01 14:11:36
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \demovueclif:\lianxi\jest-base\5.async.test.js
@@ -50,11 +50,9 @@ test('异步测试4,针对返回premise',async ()=>{
 })
 
 test('异步测试5,针对返回premise',async ()=>{
-    var result=await expect(syncReturnPromise());
-    console.log(result)
-    expect(result.respCode).resolves.toMatchObject({
-        "status":200
-    })
+    var result=await syncReturnPromise();
+    //console.log(result.data);
+    expect(result.data.respCode).toBe(0);
 })
 
 
