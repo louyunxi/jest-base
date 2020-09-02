@@ -54,6 +54,7 @@ test('测试减一',()=>{
 })  
 */
 
+
 //分组语法
 /* let count=null;
 describe('测试count类',()=>{
@@ -83,6 +84,7 @@ describe('测试count类',()=>{
     })
 }) */
 
+
 /* 
 //返回结果 根据结构化 方便阅读 和管理
 
@@ -99,7 +101,6 @@ describe('测试count类',()=>{
 钩子函数 有作用域
 describe 都可以有自己的  beforeAll，afterAll，beforeEach，afterEach
 describe 与 describe 嵌套时 先执行外部的 钩子函数 在执行内部的钩子函数
-
 */
 
 
@@ -137,3 +138,24 @@ PASS  ./6.hookFunction.test.js
     √ 测试加1 (10 ms)
     ○ skipped 测试加2 
 */
+
+
+/* 
+beforeAll(() => console.log('1 - beforeAll'));  //1 
+afterAll(() => console.log('1 - afterAll'));    //12
+
+beforeEach(() => console.log('1 - beforeEach'));    //2 6
+afterEach(() => console.log('1 - afterEach'));  //4 10
+
+test('', () => console.log('1 - test'));    //3
+
+describe('Scoped / Nested block', () => {
+  beforeAll(() => console.log('2 - beforeAll'));    //5
+  afterAll(() => console.log('2 - afterAll'));  // 11
+  beforeEach(() => console.log('2 - beforeEach'));  //  7
+  afterEach(() => console.log('2 - afterEach'));    // 9
+  test('', () => console.log('2 - test'));  //8
+}); 
+*/
+//before 外层先来 after里层先来 从上至下
+//(beforeAll beforeEach          test        (beforeAll beforeEach    test   afterEach afterAll)                    afterEach afterAll)
