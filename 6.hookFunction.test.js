@@ -6,7 +6,7 @@
 import Count from './someClass.js'
 
 
-/* 
+
 //测试类时 需要在测试外面 实例化
 const count=new Count(0);
 test('测试加一',()=>{
@@ -17,7 +17,7 @@ test('测试减一',()=>{
     count.minusOne();
     expect(count.count).toBe(0);
 }) 
-*/
+
 
 /* 
 let count=null;
