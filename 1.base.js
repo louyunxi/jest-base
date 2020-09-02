@@ -1,15 +1,3 @@
-/*
- * @Author: your name
- * @Date: 2020-08-30 21:38:09
- * @LastEditTime: 2020-08-30 21:56:30
- * @LastEditors: your name
- * @Description: In User Settings Edit
- * @FilePath: \demovueclif:\lianxi\jest-base\1.基本原理\index.js
- */
-/**
- * @作者 Lucifer-ye
- * @创建时间 2020/8/16 0016 17:55
- */
 const {add, minus, multi}=require('./math.js');
 /** ———————————————————————————————————————— step one ———————————————————————————————————————— **/
 const result = add(3,7);
